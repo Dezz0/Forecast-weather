@@ -1,10 +1,15 @@
 import React from "react";
 
-export default function ChangeCity(props) {
+export default function ChangeCity({ gettingWeather, gettingWeeklyWeather }) {
   return (
     <div className="form_city">
-      <form onSubmit={props.gettingWeather}>
-        <input type="text" name="city" placeholder="Поиск..." />
+      <form
+        onSubmit={(e) => {
+          gettingWeather(e);
+          gettingWeeklyWeather(e);
+        }}
+      >
+        <input className="input_city" type="text" name="city" placeholder="Поиск..." />
         <button className="btn">Найти</button>
       </form>
     </div>

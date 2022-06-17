@@ -12,31 +12,28 @@ export default function WeatherToday({ infoCity, errorSearch }) {
       <h2>
         {infoCity.name} <span style={{ fontSize: 8 }}>{infoCity.sys.country}</span>
       </h2>
-      <div className="container_bar">
-        <div className="left_bar">
-          <h3>Погода на сегодня:</h3>
+      <div className="info_bar">
+        <p className="weather_today">
           <i className={`owf owf-${infoCity.weather[0].id} owf-3x icon-style`}></i>
-          <p>{infoCity.weather[0].description}</p>
-          <p>Температура сейчас: {Math.round(infoCity.main.temp)}℃</p>
-        </div>
-        <div className="right_bar">
-          <p>
-            <span>Восход по МСК:</span>
-            <span>{msToTime(infoCity.sys.sunrise)}</span>
-          </p>
-          <p>
-            <span>Закат по МСК:</span>
-            <span>{msToTime(infoCity.sys.sunset)}</span>
-          </p>
-          <p>
-            <span>Атмосферное давление:</span>
-            <span>{infoCity.main.pressure} мм рт. ст.</span>
-          </p>
-          <p>
-            <span>Часовой пояс равен:</span>
-            <span>{setTimezone(infoCity.timezone)}</span>
-          </p>
-        </div>
+          <span>{infoCity.weather[0].description}</span>
+        </p>
+        <p>Температура сейчас: {Math.round(infoCity.main.temp)}°C</p>
+        <p>
+          <span>Восход по МСК: </span>
+          <span>{msToTime(infoCity.sys.sunrise)}</span>
+        </p>
+        <p>
+          <span>Закат по МСК: </span>
+          <span>{msToTime(infoCity.sys.sunset)}</span>
+        </p>
+        <p>
+          <span>Атмосферное давление: </span>
+          <span>{infoCity.main.pressure} мм рт. ст.</span>
+        </p>
+        <p>
+          <span>Часовой пояс равен: </span>
+          <span>{setTimezone(infoCity.timezone)}</span>
+        </p>
       </div>
     </div>
   ) : (
