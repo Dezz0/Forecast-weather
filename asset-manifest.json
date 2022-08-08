@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Forecast-weather/static/css/main.cd24b33d.css",
+    "main.js": "/Forecast-weather/static/js/main.5b19ad4d.js",
+    "static/media/claudel-rheault-ZVbv1akA-l4-unsplash.jpg": "/Forecast-weather/static/media/claudel-rheault-ZVbv1akA-l4-unsplash.934ecadd8b65c3b9a58c.jpg",
+    "index.html": "/Forecast-weather/index.html",
+    "main.cd24b33d.css.map": "/Forecast-weather/static/css/main.cd24b33d.css.map",
+    "main.5b19ad4d.js.map": "/Forecast-weather/static/js/main.5b19ad4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd24b33d.css",
+    "static/js/main.5b19ad4d.js"
+  ]
+}
